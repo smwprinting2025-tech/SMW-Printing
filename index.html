@@ -156,22 +156,18 @@
   <section id="order">
     <h2>Place an Order</h2>
     <p>Upload your file and we’ll get back to you with a quote.</p>
-    <section id="order">
-  <h2>Place an Order</h2>
-  <p>Upload your file and we’ll get back to you with a quote.</p>
-  <form action="https://formspree.io/f/xzdpkkqn" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <select name="material">
-      <option value="PLA">PLA</option>
-      <option value="PETG">PETG</option>
-    </select>
-    <textarea name="details" rows="4" placeholder="Describe your print (size, color, deadline)"></textarea>
-    <button type="submit">Submit Request</button>
-  </form>
-  <p><small>This form will send submissions to your email via Formspree.</small></p>
-</section>
-
+    <form action="https://formspree.io/f/xzdpkkqn" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="material">
+        <option value="PLA">PLA</option>
+        <option value="PETG">PETG</option>
+      </select>
+      <textarea name="details" rows="4" placeholder="Describe your print (size, color, deadline)"></textarea>
+      <label for="stlfile">Upload STL file:</label>
+      <input type="file" name="stlfile" id="stlfile" accept=".stl" required />
+      <button type="submit">Submit Request</button>
+    </form>
     <p><small>This form will send submissions to your email via Formspree.</small></p>
   </section>
 
@@ -186,4 +182,3 @@
   </footer>
 </body>
 </html>
-
