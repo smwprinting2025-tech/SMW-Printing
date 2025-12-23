@@ -120,7 +120,7 @@
     <div class="grid">
       <div class="card">
         <h3>3D Printing</h3>
-        <p>PLA and PETG prints for school projects, parts, and models.</p>
+        <p>PLA, PETG, and TPU prints for school projects, parts, and models.</p>
       </div>
       <div class="card">
         <h3>Design Help</h3>
@@ -181,12 +181,22 @@
     <form action="https://formspree.io/f/xzdpkkqn" method="POST">
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="email" name="email" placeholder="Email" required />
-      <select name="material">
+      <label for="material">Material:</label>
+      <select name="material" id="material">
         <option value="PLA">PLA</option>
         <option value="PETG">PETG</option>
         <option value="TPU">TPU</option>
       </select>
-      <textarea name="details" rows="4" placeholder="Describe your print (size, color, deadline)"></textarea>
+      <label for="color">Color:</label>
+      <select name="color" id="color">
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Bone White">Bone White</option>
+        <option value="White">White</option>
+        <option value="Clear">Clear</option>
+        <option value="Grey">Grey</option>
+      </select>
+      <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
       <button type="submit">Submit Request</button>
     </form>
     <p><small>This form will send submissions to your email via Formspree.</small></p>
