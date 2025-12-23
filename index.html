@@ -6,109 +6,29 @@
   <title>SMW Prints – Student 3D Printing</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #b91c1c;
-      --secondary: #f3f4f6;
-      --bg: #1f1f1f;
-      --card: #2b2b2b;
-    }
+    :root { --primary: #b91c1c; --secondary: #f3f4f6; --bg: #1f1f1f; --card: #2b2b2b; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Roboto Slab', serif;
-      background: var(--bg);
-      color: var(--secondary);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), #f87171);
-      color: white;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
+    body { margin: 0; font-family: 'Roboto Slab', serif; background: var(--bg); color: var(--secondary); line-height: 1.6; }
+    header { background: linear-gradient(135deg, var(--primary), #f87171); color: white; padding: 3rem 1.5rem; text-align: center; }
     header h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
     header p { margin: 0; font-size: 1.1rem; }
-    nav {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      background: var(--primary);
-      padding: 0.75rem;
-      position: sticky;
-      top: 0;
-      border-bottom: 1px solid #f87171;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--secondary);
-      font-weight: 500;
-    }
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
+    nav { display: flex; gap: 1rem; justify-content: center; background: var(--primary); padding: 0.75rem; position: sticky; top: 0; border-bottom: 1px solid #f87171; }
+    nav a { text-decoration: none; color: var(--secondary); font-weight: 500; }
+    section { padding: 3rem 1.5rem; max-width: 1100px; margin: auto; }
     h2 { margin-top: 0; font-size: 2rem; color: var(--primary); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--card);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-      border-top: 5px solid var(--primary);
-    }
-    .price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    form {
-      display: grid;
-      gap: 1rem;
-      max-width: 500px;
-    }
-    input, textarea, select, button {
-      padding: 0.75rem;
-      border-radius: 0.5rem;
-      border: 1px solid #f87171;
-      font-size: 1rem;
-      font-family: 'Roboto Slab', serif;
-      background-color: #3b3b3b;
-      color: var(--secondary);
-    }
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card); padding: 1.5rem; border-radius: 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border-top: 5px solid var(--primary); }
+    .price { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; }
+    input, textarea, select, button { padding: 0.75rem; border-radius: 0.5rem; border: 1px solid #f87171; font-size: 1rem; font-family: 'Roboto Slab', serif; background-color: #3b3b3b; color: var(--secondary); width: 100%; }
+    button { background: var(--primary); color: white; border: none; cursor: pointer; font-weight: 600; }
     button:hover { opacity: 0.9; }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #2b2b2b;
-      font-size: 0.9rem;
-      color: var(--secondary);
-    }
-    .note {
-      font-size: 0.9rem;
-      color: #f87171;
-    }
-    .faq {
-      background: var(--card);
-      padding: 1rem 1.5rem;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-    }
-    .faq h3 {
-      margin: 0 0 0.5rem;
-      color: var(--primary);
-    }
+    .print-buttons { display: flex; gap: 12px; margin: 1rem 0; }
+    .print-buttons button { padding: 10px 14px; border-radius: 8px; }
+    .note { font-size: 0.9rem; color: #f87171; }
+    .faq { background: var(--card); padding: 1rem 1.5rem; border-radius: 1rem; margin-bottom: 1rem; }
+    .faq h3 { margin: 0 0 0.5rem; color: var(--primary); }
+    .print-section { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
   </style>
 </head>
 <body>
@@ -129,130 +49,108 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>
-      We’re a group of students running a small 3D printing business at school.
-      Our goal is to make affordable, fast 3D prints for classmates, clubs, and
-      teachers—while learning real-world business and engineering skills.
-    </p>
+    <p>We’re a group of students running a small 3D printing business at school. We help classmates, clubs, and teachers bring their projects to life while learning business and engineering skills.</p>
     <p><strong>Note:</strong> We take submitted 3D models and print them, but we do not design or model files ourselves.</p>
   </section>
 
   <section id="services">
-    <h2>What We Offer</h2>
+    <h2>Services</h2>
     <div class="grid">
-      <div class="card">
-        <h3>3D Printing</h3>
-        <p>PLA, PETG, and TPU prints for school projects, parts, and models.</p>
-      </div>
-      <div class="card">
-        <h3>Fast Turnaround</h3>
-        <p>Most prints ready within 2–5 school days.</p>
-      </div>
+      <div class="card"><h3>3D Printing</h3><p>PLA, PETG, and TPU prints for school projects, parts, and models.</p></div>
+      <div class="card"><h3>Fast Turnaround</h3><p>Most prints ready within 2–5 school days.</p></div>
     </div>
   </section>
 
   <section id="pricing">
     <h2>Pricing</h2>
     <div class="grid">
-      <div class="card">
-        <h3>Small Prints</h3>
-        <p class="price">$3–$5</p>
-        <p>Keychains, small parts, simple models.</p>
-      </div>
-      <div class="card">
-        <h3>Medium Prints</h3>
-        <p class="price">$6–$10</p>
-        <p>Phone stands, enclosures, class projects.</p>
-      </div>
-      <div class="card">
-        <h3>Large / Custom</h3>
-        <p class="price">Quote</p>
-        <p>Big or detailed prints priced by material & time.</p>
-      </div>
-      <div class="card">
-        <h3>Multicolor Prints</h3>
-        <p class="price">Quote</p>
-        <p>Any print using more than one color.</p>
-      </div>
+      <div class="card"><h3>Small Prints</h3><p class="price">$3–$5</p><p>Toys, fidgets, small parts, simple models.</p></div>
+      <div class="card"><h3>Medium Prints</h3><p class="price">$6–$8</p><p>Phone stands, enclosures, class projects.</p></div>
+      <div class="card"><h3>Large / Custom</h3><p class="price">Quote</p><p>Big, detailed, or multi-color prints priced individually.</p></div>
     </div>
   </section>
 
   <section id="filament-supply">
     <h2>Current Filament Supply</h2>
     <div class="grid">
-      <div class="card">
-        <h3>PLA</h3>
-        <p>Black: 2 rolls</p>
-        <p>Blue: 1 roll</p>
-        <p>Bone White: 1 roll</p>
-      </div>
-      <div class="card">
-        <h3>PETG</h3>
-        <p>Black: 1 roll</p>
-        <p>White: 1 roll</p>
-        <p>Clear: 1 roll</p>
-      </div>
-      <div class="card">
-        <h3>TPU</h3>
-        <p>Grey: 1 roll</p>
-      </div>
+      <div class="card"><h3>PLA</h3><p>Black: 2 rolls</p><p>Blue: 1 roll</p><p>Bone White: 1 roll</p></div>
+      <div class="card"><h3>PETG</h3><p>Black: 1 roll</p><p>White: 1 roll</p><p>Clear: 1 roll</p></div>
+      <div class="card"><h3>TPU</h3><p>Grey: 1 roll</p></div>
     </div>
   </section>
 
   <section id="order">
     <h2>Place an Order</h2>
     <form action="https://formspree.io/f/xzdpkkqn" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
       <input type="email" name="email" placeholder="Email" required />
-      <label for="material">Material:</label>
-      <select name="material" id="material" onchange="updateColors()">
-        <option value="PLA">PLA</option>
-        <option value="PETG">PETG</option>
-        <option value="TPU">TPU</option>
-      </select>
-      <label for="color">Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
-      <select name="color" id="color" multiple></select>
-      <p class="note">*Model has to be free</p>
-      <input type="url" name="modelLink" placeholder="Link to your 3D model file" required />
-      <label for="size">Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
-      <select name="size" id="size" multiple>
-        <option value="Custom">Custom</option>
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-      </select>
-      <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
+      <label for="location">Locker Number or (If Teacher) Class Number</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Locker 214 or Room B12" required />
+
+      <div class="print-section" id="firstPrint">
+        <label>Material:</label>
+        <select name="material" class="material-select" onchange="updateColors(this)">
+          <option value="PLA">PLA</option>
+          <option value="PETG">PETG</option>
+          <option value="TPU">TPU</option>
+        </select>
+        <label>Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
+        <select name="color" class="color-select" multiple></select>
+        <label>Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
+        <select name="size" multiple><option>Custom</option><option>Small</option><option>Medium</option><option>Large</option></select>
+        <p class="note">*Model has to be free</p>
+        <input type="url" name="modelLink" placeholder="Link to your 3D model file" required />
+        <textarea name="details" rows="3" placeholder="Details for print"></textarea>
+      </div>
+
+      <div class="print-section" id="secondPrint" style="display:none;">
+        <label>Material:</label>
+        <select name="material2" class="material-select" onchange="updateColors(this)">
+          <option value="PLA">PLA</option><option value="PETG">PETG</option><option value="TPU">TPU</option>
+        </select>
+        <label>Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
+        <select name="color2" class="color-select" multiple></select>
+        <label>Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
+        <select name="size2" multiple><option>Custom</option><option>Small</option><option>Medium</option><option>Large</option></select>
+        <p class="note">*Model has to be free</p>
+        <input type="url" name="modelLink2" placeholder="Link to your 3D model file" required />
+        <textarea name="details2" rows="3" placeholder="Details for second print"></textarea>
+      </div>
+
+      <div class="print-section" id="thirdPrint" style="display:none;">
+        <label>Material:</label>
+        <select name="material3" class="material-select" onchange="updateColors(this)">
+          <option value="PLA">PLA</option><option value="PETG">PETG</option><option value="TPU">TPU</option>
+        </select>
+        <label>Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
+        <select name="color3" class="color-select" multiple></select>
+        <label>Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
+        <select name="size3" multiple><option>Custom</option><option>Small</option><option>Medium</option><option>Large</option></select>
+        <p class="note">*Model has to be free</p>
+        <input type="url" name="modelLink3" placeholder="Link to your 3D model file" required />
+        <textarea name="details3" rows="3" placeholder="Details for third print"></textarea>
+      </div>
+
+      <div class="print-buttons">
+        <button type="button" id="addPrintBtn">Add Print</button>
+        <button type="button" id="removePrintBtn">Remove Print</button>
+      </div>
+
+      <label style="font-size:0.95rem;"><input type="checkbox" name="agree" required /> I agree to the Rules & Requirements (Models must be free and appropriate, real full name required)</label>
       <button type="submit">Submit Request</button>
+      <p class="note">Estimated Price: We estimate on the higher side. Multi-color or custom prints cannot be estimated. You will receive an email with a quote after submitting.</p>
     </form>
-    <p><small>This form will send submissions to your email via Formspree.</small></p>
   </section>
 
   <section id="faq">
     <h2>FAQ</h2>
-    <div class="faq">
-      <h3>Do we model?</h3>
-      <p>No, we do not model YET, because not all of our team is trained to model.</p>
-    </div>
-    <div class="faq">
-      <h3>Can I do multi-color prints?</h3>
-      <p>Yes, you can, but we quote on how much it will cost since it creates lots of waste.</p>
-    </div>
-    <div class="faq">
-      <h3>What files do we accept?</h3>
-      <p>We accept links to websites. MUST BE FREE. On the websites we get the files we need.</p>
-    </div>
-    <div class="faq">
-      <h3>How long does it take to get my print?</h3>
-      <p>Most prints are ready within 2–5 school days, depending on size and complexity.</p>
-    </div>
-    <div class="faq">
-      <h3>What if my model fails to print?</h3>
-      <p>If there’s an error in the file or a print fails, we’ll contact you to fix it or redo the print.</p>
-    </div>
-    <div class="faq">
-      <h3>Can I mix multiple material types together?</h3>
-      <p>No, unless you type it is for support which will cost a tiny bit more but better print quality.</p>
-    </div>
+    <div class="faq"><h3>Do we model?</h3><p>No, we do not model YET, because not all of our team is trained to model.</p></div>
+    <div class="faq"><h3>Can I do multi-color prints?</h3><p>Yes, but we quote the cost as it generates extra waste.</p></div>
+    <div class="faq"><h3>What files do we accept?</h3><p>Links must be free on websites we get the files from.</p></div>
+    <div class="faq"><h3>Can I mix multiple material types together?</h3><p>No, unless it is for support, which costs slightly more for better print quality.</p></div>
   </section>
 
   <section id="contact">
@@ -266,19 +164,13 @@
   </footer>
 
   <script>
-    const colorSelect = document.getElementById('color');
-    const materialSelect = document.getElementById('material');
+    const materialColors = { 'PLA': ['Black','Blue','Bone White'], 'PETG':['Black','White','Clear'], 'TPU':['Grey'] };
 
-    const materialColors = {
-      'PLA': ['Black', 'Blue', 'Bone White'],
-      'PETG': ['Black', 'White', 'Clear'],
-      'TPU': ['Grey']
-    };
-
-    function updateColors() {
-      const selectedMaterial = materialSelect.value;
+    function updateColors(selectElement) {
+      const parentDiv = selectElement.closest('.print-section');
+      const colorSelect = parentDiv.querySelector('.color-select');
       colorSelect.innerHTML = '';
-      materialColors[selectedMaterial].forEach(color => {
+      materialColors[selectElement.value].forEach(color => {
         const option = document.createElement('option');
         option.value = color;
         option.textContent = color;
@@ -286,7 +178,23 @@
       });
     }
 
-    updateColors();
+    document.querySelectorAll('.material-select').forEach(sel => updateColors(sel));
+
+    const secondPrint = document.getElementById('secondPrint');
+    const thirdPrint = document.getElementById('thirdPrint');
+
+    const addPrintBtn = document.getElementById('addPrintBtn');
+    const removePrintBtn = document.getElementById('removePrintBtn');
+
+    addPrintBtn.addEventListener('click', () => {
+      if (secondPrint.style.display === 'none') secondPrint.style.display = 'flex';
+      else if (thirdPrint.style.display === 'none') thirdPrint.style.display = 'flex';
+    });
+
+    removePrintBtn.addEventListener('click', () => {
+      if (thirdPrint.style.display === 'flex') thirdPrint.style.display = 'none';
+      else if (secondPrint.style.display === 'flex') secondPrint.style.display = 'none';
+    });
   </script>
 </body>
 </html>
