@@ -182,19 +182,14 @@
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <label for="material">Material:</label>
-      <select name="material" id="material">
+      <select name="material" id="material" onchange="updateColors()">
         <option value="PLA">PLA</option>
         <option value="PETG">PETG</option>
         <option value="TPU">TPU</option>
       </select>
       <label for="color">Color:</label>
       <select name="color" id="color">
-        <option value="Black">Black</option>
-        <option value="Blue">Blue</option>
-        <option value="Bone White">Bone White</option>
-        <option value="White">White</option>
-        <option value="Clear">Clear</option>
-        <option value="Grey">Grey</option>
+        <!-- Options will be populated by JS -->
       </select>
       <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
       <button type="submit">Submit Request</button>
@@ -211,5 +206,30 @@
   <footer>
     <p>© 2025 SMW Prints – Student-run business</p>
   </footer>
+
+  <script>
+    const colorSelect = document.getElementById('color');
+    const materialSelect = document.getElementById('material');
+
+    const materialColors = {
+      'PLA': ['Black', 'Blue', 'Bone White'],
+      'PETG': ['Black', 'White', 'Clear'],
+      'TPU': ['Grey']
+    };
+
+    function updateColors() {
+      const selectedMaterial = materialSelect.value;
+      colorSelect.innerHTML = '';
+      materialColors[selectedMaterial].forEach(color => {
+        const option = document.createElement('option');
+        option.value = color;
+        option.textContent = color;
+        colorSelect.appendChild(option);
+      });
+    }
+
+    // Initialize color options
+    updateColors();
+  </script>
 </body>
 </html>
