@@ -89,6 +89,10 @@
       background: #e5e7eb;
       font-size: 0.9rem;
     }
+    .note {
+      font-size: 0.9rem;
+      color: #374151;
+    }
   </style>
 </head>
 <body>
@@ -151,6 +155,11 @@
         <p class="price">Quote</p>
         <p>Big or detailed prints priced by material & time.</p>
       </div>
+      <div class="card">
+        <h3>Multicolor Prints</h3>
+        <p class="price">Quote</p>
+        <p>Any print using more than one color.</p>
+      </div>
     </div>
   </section>
 
@@ -187,9 +196,9 @@
         <option value="PETG">PETG</option>
         <option value="TPU">TPU</option>
       </select>
-      <label for="color">Color:</label>
-      <select name="color" id="color">
-        <!-- Options will be populated by JS -->
+      <label for="color">Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
+      <select name="color" id="color" multiple>
+        <!-- Options populated by JS -->
       </select>
       <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
       <button type="submit">Submit Request</button>
