@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Prints – Student 3D Printing</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #0f172a;
+      --bg: #f8fafc;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #60a5fa);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
+    header p { margin: 0; font-size: 1.1rem; }
+    nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      background: white;
+      padding: 0.75rem;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 { margin-top: 0; font-size: 2rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 500px;
+    }
+    input, textarea, select, button {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #cbd5f5;
+      font-size: 1rem;
+    }
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { opacity: 0.9; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #e5e7eb;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Campus Prints</h1>
+    <p>Student‑run 3D printing for projects, clubs, and prototypes</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      We’re a group of students running a small 3D printing business at school.
+      Our goal is to make affordable, fast 3D prints for classmates, clubs, and
+      teachers—while learning real‑world business and engineering skills.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>What We Offer</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>3D Printing</h3>
+        <p>PLA and PETG prints for school projects, parts, and models.</p>
+      </div>
+      <div class="card">
+        <h3>Design Help</h3>
+        <p>Need a model? We can help design simple parts in CAD.</p>
+      </div>
+      <div class="card">
+        <h3>Fast Turnaround</h3>
+        <p>Most prints ready within 2–5 school days.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Small Prints</h3>
+        <p class="price">$3–$5</p>
+        <p>Keychains, small parts, simple models.</p>
+      </div>
+      <div class="card">
+        <h3>Medium Prints</h3>
+        <p class="price">$6–$10</p>
+        <p>Phone stands, enclosures, class projects.</p>
+      </div>
+      <div class="card">
+        <h3>Large / Custom</h3>
+        <p class="price">Quote</p>
+        <p>Big or detailed prints priced by material & time.</p>
+      </div>
+    </div>
+    <p><em>All prices are examples—adjust to fit your costs and school rules.</em></p>
+  </section>
+
+  <section id="order">
+    <h2>Place an Order</h2>
+    <p>Upload your file and we’ll get back to you with a quote.</p>
+    <form>
+      <input type="text" placeholder="Your name" required />
+      <input type="email" placeholder="School email" required />
+      <select>
+        <option>PLA</option>
+        <option>PETG</option>
+      </select>
+      <textarea rows="4" placeholder="Describe your print (size, color, deadline)"></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+    <p><small>This demo form doesn’t send data yet.</small></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: campusprints@school.edu</p>
+    <p>Based at: [Your School Name]</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Campus Prints – Student‑run business</p>
+  </footer>
+</body>
+</html>
