@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #b91c1c; /* dark red */
-      --secondary: #f3f4f6; /* light text color for contrast */
-      --bg: #1f1f1f; /* dark background */
-      --card: #2b2b2b; /* slightly lighter card background */
+      --primary: #b91c1c;
+      --secondary: #f3f4f6;
+      --bg: #1f1f1f;
+      --card: #2b2b2b;
     }
     * { box-sizing: border-box; }
     body {
@@ -99,6 +99,16 @@
       font-size: 0.9rem;
       color: #f87171;
     }
+    .faq {
+      background: var(--card);
+      padding: 1rem 1.5rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    .faq h3 {
+      margin: 0 0 0.5rem;
+      color: var(--primary);
+    }
   </style>
 </head>
 <body>
@@ -113,6 +123,7 @@
     <a href="#pricing">Pricing</a>
     <a href="#filament-supply">Filament Supply</a>
     <a href="#order">Order</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -200,9 +211,7 @@
         <option value="TPU">TPU</option>
       </select>
       <label for="color">Color(s) <span class="note">(Press Ctrl/Cmd for multicolor)</span>:</label>
-      <select name="color" id="color" multiple>
-        <!-- Options populated by JS -->
-      </select>
+      <select name="color" id="color" multiple></select>
       <p class="note">*Model has to be free</p>
       <input type="url" name="modelLink" placeholder="Link to your 3D model file" required />
       <label for="size">Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
@@ -216,6 +225,34 @@
       <button type="submit">Submit Request</button>
     </form>
     <p><small>This form will send submissions to your email via Formspree.</small></p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq">
+      <h3>Do we model?</h3>
+      <p>No, we do not model YET, because not all of our team is trained to model.</p>
+    </div>
+    <div class="faq">
+      <h3>Can I do multi-color prints?</h3>
+      <p>Yes, you can, but we quote on how much it will cost since it creates lots of waste.</p>
+    </div>
+    <div class="faq">
+      <h3>What files do we accept?</h3>
+      <p>We accept links to websites. MUST BE FREE. On the websites we get the files we need.</p>
+    </div>
+    <div class="faq">
+      <h3>How long does it take to get my print?</h3>
+      <p>Most prints are ready within 2–5 school days, depending on size and complexity.</p>
+    </div>
+    <div class="faq">
+      <h3>What if my model fails to print?</h3>
+      <p>If there’s an error in the file or a print fails, we’ll contact you to fix it or redo the print.</p>
+    </div>
+    <div class="faq">
+      <h3>Can I mix multiple material types together?</h3>
+      <p>No, unless you type it is for support which will cost a tiny bit more but better print quality.</p>
+    </div>
   </section>
 
   <section id="contact">
@@ -249,7 +286,6 @@
       });
     }
 
-    // Initialize color options
     updateColors();
   </script>
 </body>
