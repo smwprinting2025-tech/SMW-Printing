@@ -205,6 +205,13 @@
       </select>
       <p class="note">*Model has to be free</p>
       <input type="url" name="modelLink" placeholder="Link to your 3D model file" required />
+      <label for="size">Print Size <span class="note">(Press Ctrl/Cmd for multiple selections; click Custom if you are doing multi-color)</span>:</label>
+      <select name="size" id="size" multiple>
+        <option value="Custom">Custom</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+      </select>
       <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
       <button type="submit">Submit Request</button>
     </form>
