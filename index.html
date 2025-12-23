@@ -4,23 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMW Prints – Student 3D Printing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;
-      --secondary: #0f172a;
-      --bg: #f8fafc;
-      --card: #ffffff;
+      --primary: #b91c1c; /* dark red */
+      --secondary: #f3f4f6; /* light text color for contrast */
+      --bg: #1f1f1f; /* dark background */
+      --card: #2b2b2b; /* slightly lighter card background */
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: 'Roboto Slab', serif;
       background: var(--bg);
       color: var(--secondary);
       line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, var(--primary), #60a5fa);
+      background: linear-gradient(135deg, var(--primary), #f87171);
       color: white;
       padding: 3rem 1.5rem;
       text-align: center;
@@ -31,11 +32,11 @@
       display: flex;
       gap: 1rem;
       justify-content: center;
-      background: white;
+      background: var(--primary);
       padding: 0.75rem;
       position: sticky;
       top: 0;
-      border-bottom: 1px solid #e5e7eb;
+      border-bottom: 1px solid #f87171;
     }
     nav a {
       text-decoration: none;
@@ -47,7 +48,7 @@
       max-width: 1100px;
       margin: auto;
     }
-    h2 { margin-top: 0; font-size: 2rem; }
+    h2 { margin-top: 0; font-size: 2rem; color: var(--primary); }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -57,7 +58,8 @@
       background: var(--card);
       padding: 1.5rem;
       border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border-top: 5px solid var(--primary);
     }
     .price {
       font-size: 1.5rem;
@@ -72,8 +74,11 @@
     input, textarea, select, button {
       padding: 0.75rem;
       border-radius: 0.5rem;
-      border: 1px solid #cbd5f5;
+      border: 1px solid #f87171;
       font-size: 1rem;
+      font-family: 'Roboto Slab', serif;
+      background-color: #3b3b3b;
+      color: var(--secondary);
     }
     button {
       background: var(--primary);
@@ -86,12 +91,13 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: #e5e7eb;
+      background: #2b2b2b;
       font-size: 0.9rem;
+      color: var(--secondary);
     }
     .note {
       font-size: 0.9rem;
-      color: #374151;
+      color: #f87171;
     }
   </style>
 </head>
@@ -117,6 +123,7 @@
       Our goal is to make affordable, fast 3D prints for classmates, clubs, and
       teachers—while learning real-world business and engineering skills.
     </p>
+    <p><strong>Note:</strong> We take submitted 3D models and print them, but we do not design or model files ourselves.</p>
   </section>
 
   <section id="services">
@@ -125,10 +132,6 @@
       <div class="card">
         <h3>3D Printing</h3>
         <p>PLA, PETG, and TPU prints for school projects, parts, and models.</p>
-      </div>
-      <div class="card">
-        <h3>Design Help</h3>
-        <p>Need a model? We can help design simple parts in CAD.</p>
       </div>
       <div class="card">
         <h3>Fast Turnaround</h3>
@@ -200,6 +203,7 @@
       <select name="color" id="color" multiple>
         <!-- Options populated by JS -->
       </select>
+      <input type="url" name="modelLink" placeholder="Link to your 3D model file" required />
       <textarea name="details" rows="4" placeholder="Describe your print (size, deadline, special instructions)"></textarea>
       <button type="submit">Submit Request</button>
     </form>
